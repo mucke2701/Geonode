@@ -2004,12 +2004,12 @@ _AZURE_SOCIALACCOUNT_PROVIDER = {
         "prompt": "select_account",
     },
     "COMMON_FIELDS": {"email": "mail", "last_name": "surname", "first_name": "givenName"},
-    "UID_FIELD": "unique_name",
+    "UID_FIELD": "sub",
     "GROUP_ROLE_MAPPER_CLASS": SOCIALACCOUNT_GROUP_ROLE_MAPPER,
     "ACCOUNT_CLASS": "allauth.socialaccount.providers.azure.provider.AzureAccount",
     "ACCESS_TOKEN_URL": f"https://login.microsoftonline.com/{_AZURE_TENANT_ID}/oauth2/v2.0/token",
     "AUTHORIZE_URL": f"https://login.microsoftonline.com/{_AZURE_TENANT_ID}/oauth2/v2.0/authorize",
-    "PROFILE_URL": "https://graph.microsoft.com/v1.0/me",
+    #"PROFILE_URL": "https://graph.microsoft.com/v1.0/me",
 }
 
 _GOOGLE_SOCIALACCOUNT_PROVIDER = {

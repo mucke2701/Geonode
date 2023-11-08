@@ -32,11 +32,6 @@ else
         ln -sf "/geonode-certificates/autoissued" /certificate_symlink
 fi
 
-if [ -z "${HTTPS_HOST}" ]; then
-        HTTP_SCHEME="http"
-else
-        HTTP_SCHEME="https"
-fi
 
 export HTTP_SCHEME=${HTTP_SCHEME:-http}
 export GEONODE_LB_HOST_IP=${GEONODE_LB_HOST_IP:-django}
