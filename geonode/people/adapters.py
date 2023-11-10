@@ -279,12 +279,12 @@ class GenericOpenIDConnectAdapter(OAuth2Adapter, SocialAccountAdapter):
                     # https://openid.net/specs/openid-connect-core-1_0.html#IDTokenValidation
                     options={
                         "verify_signature": False,
-                        "verify_iss": True,
-                        "verify_aud": True,
-                        "verify_exp": True,
+                        #"verify_iss": True,
+                        #"verify_aud": True,
+                        #"verify_exp": True,
                     },
-                    issuer=self.id_token_issuer,
-                    audience=app.client_id,
+                    #issuer=self.id_token_issuer,
+                    #audience=app.client_id,
                 )
             except jwt.PyJWTError as e:
                 raise OAuth2Error("Invalid id_token") from e
